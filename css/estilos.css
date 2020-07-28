@@ -8,16 +8,32 @@
 */
 /*-------------Variables---------*/
 :root{
---green-color: #7ACC2D;
+--green-color: #333333;
 
 }
 
 /*-------------Variables---------*/
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Exo", sans-serif;
+}
+
+@media screen and (max-width: 868px) {
+  h2 {
+  font-size: 20px; 
+  }
+}
+
+
 html,body{
   padding:0px;
   margin:0px;
-  font-size: 12px;
+  font-size: 25px;
   font-family: Helvetica;
 }
 
@@ -28,14 +44,21 @@ label{
 nav{
   display: flex;
   background-color: var(--green-color);
-  padding: 10px;
+  padding: 1rem;
   color: white;
   justify-content: space-between;
   align-items: center;
 }
 
+
 nav ul{
   display: flex;
+}
+
+@media screen and (max-width: 868px) {
+  nav ul {
+  flex-wrap: wrap; 
+  }
 }
 
 nav li{
@@ -43,9 +66,15 @@ nav li{
   list-style: none;
 
 }
+@media screen and (max-width: 868px) {
+  nav li {
+  font-size: 15px; 
+  }
+}
 
 nav li a{
-  color: black;
+  padding-right: 10px;
+  color:white;
   text-decoration: none;
 }
 
@@ -56,17 +85,20 @@ nav li a:hover{
 /* ------------------------ Main section */
 
 .main_section{
-  padding: 15%;
+  /* padding: 14%; */
   text-align: center;
+  /* background-color: #d8d4d4; */
 }
 
 .products{
-  background-image: url("../images/curve.png");
+  /* background-image: url("../images/curve.png"); */
+/* background-color: #d8d4d4; */
   max-height: 50px;
   background-size: cover;
   background-position: center top;
   padding: 20%;
   display: flex;
+  justify-content: center;
 }
 
 .product{
@@ -102,6 +134,8 @@ nav li a:hover{
 .beneficios{
   padding: 20px;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .description_img{
@@ -122,8 +156,190 @@ nav li a:hover{
 .mention .tittle{
   text-align: center;
   padding: 20px;
+  background-color: #d8d4d4;
+  width: 50%;
+  justify-content: center;
+  margin-left: 12rem;
+  margin-right: 10rem;
 }
 
 .mention_individual{
+  margin: 30px;
   padding: 20px;
+  text-align: center;
+  background-color: #d8d4d4;
+  border-radius: 4px;
+  box-sizing: content-box;
+  width: 33%;
+}
+
+.footer{
+  background-color: #333333;
+}
+.media-logos{
+  width: 4rem;
+  height: 4rem;
+  padding: 10px;
+}
+
+@media screen and (max-width: 868px) {
+  .media-logos {
+  width: 1rem;
+  height: 1rem; 
+  padding: 5px;
+  }
+}
+
+.brand_image{
+  height: 100px;
+
+}
+
+.contact-detail{
+  padding: 10px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.contact{
+  padding-left: 2rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.e-mail{
+  color: white;
+  margin: 5px;
+}
+
+.h3{
+  margin: 10px;
+}
+
+.content{
+  text-align: center;
+}
+
+/* .background-image{
+  background-image: url("../images/background1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+} */
+
+.image-size{
+  width: 50%;
+  height: 200px;
+}
+
+.presentation{
+  width: 50%;
+}
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box{
+  padding: 20px;
+}
+
+.main img{
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 868px) {
+  .main {
+  flex-wrap: wrap; 
+  }
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+  flex: 1;
+}
+
+.event-list {
+  display: flex; 
+}
+
+@media screen and (max-width: 868px) {
+  .event-list {
+  flex-wrap: wrap; 
+  }
+}
+
+.event-list-title {
+  margin-left: 20px;
+}
+
+.event {
+  margin: 1%;
+  width: 48%;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f4fbff;
+}
+
+.event img {
+  width: 480px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-detail {
+  margin: 20px 40px;
+  background-color: white;
+  margin-top: -40px;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.event-description {
+  text-align: left;
+}
+
+.event-url {
+  color: #056fff;
+  border: 1px solid;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.event {
+  width: auto;
+  flex-shrink: initial;
+}
+
+.event-imageContainer img {
+  width: 100%;
+}
+
+.event-detail {
+  margin: -2em 0.5em 0.5em;
+  padding: 1em;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+  flex: 1;
 }
